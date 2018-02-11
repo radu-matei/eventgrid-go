@@ -22,7 +22,7 @@ func main() {
 		log.Fatalf("cannot get eventgrid client: %v", err)
 	}
 
-	scope := fmt.Sprintf("/subscriptions/%s/%s/providers/Microsoft.Storage/storageAccounts/%s", subscriptionID, resourceGroup, storageAccountName)
+	scope := fmt.Sprintf("/subscriptions/%s/resourceGroups/%s/providers/Microsoft.Storage/storageAccounts/%s", subscriptionID, resourceGroup, storageAccountName)
 	subscriptionName := fmt.Sprintf("%seventsubscription", storageAccountName)
 
 	subscription := eventgrid.EventSubscription{
