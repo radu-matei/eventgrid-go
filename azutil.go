@@ -17,10 +17,10 @@ var (
 	defaultActiveDirectoryEndpoint = azure.PublicCloud.ActiveDirectoryEndpoint
 	defaultResourceManagerEndpoint = azure.PublicCloud.ResourceManagerEndpoint
 
-	subscriptionID = getEnvVarOrExit("AZURE_SUBSCRIPTION_ID")
-	tenantID       = getEnvVarOrExit("AZURE_TENANT_ID")
-	clientID       = getEnvVarOrExit("AZURE_CLIENT_ID")
-	clientSecret   = getEnvVarOrExit("AZURE_CLIENT_SECRET")
+	subscriptionID = getEnvVarOrExit("AZ_SUBSCRIPTION_ID")
+	tenantID       = getEnvVarOrExit("AZ_TENANT_ID")
+	clientID       = getEnvVarOrExit("AZ_CLIENT_ID")
+	clientSecret   = getEnvVarOrExit("AZ_CLIENT_SECRET")
 )
 
 func getEventGridClient() (eventgrid.EventSubscriptionsClient, error) {
